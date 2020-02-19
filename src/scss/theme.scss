@@ -1,0 +1,76 @@
+/*!
+    Template Name: Theme Wordpress + Gulp 4
+    Author: Rodrigo Viturino
+    Description: Crição do tema do zero em wordpress com Gulp 4 e Bootstrap 4 GRID
+    Version: 1.0
+    License: GNU General Public License v2 or later
+*/
+
+@import "functions";
+@import "variables"; // Custom variables.
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+/* end Bootstrap 4 GRID */
+
+/* Font-Awesome*/
+    @import "fontawesome";
+    @import "solid";
+    @import "brands";
+/* end Font-Awesome*/
+
+/* Theme UPSITES */ 
+
+    @import "header";
+    @import "footer";
+
+/* end Theme */ 
+
+body {
+    // height: 2000px;
+
+    #main {
+        padding: 180px 0;
+        // margin-bottom: 40px;
+        // border-bottom: solid 1px #fff;
+        background-color: $secondary;
+
+        @include media-breakpoint-only(xs) {
+            padding: 60px 0;
+        }
+    }
+    
+}

@@ -1,0 +1,157 @@
+.header {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    box-shadow: $box-shadow;
+    transition: all 0.7s;
+    background-color: $white;
+
+    @include media-breakpoint-only(xs) {
+        position: relative;
+        // background-color: $gray-900;
+        transition: all 0.7s;
+        box-shadow: $box-shadow;
+    }
+
+    // Ativador Menu Sticky
+        &.scrollHide {
+            transition: all 0.7s;
+            background-color: $gray-200;
+            position: fixed;
+            top: map-get($spacers, 0);
+
+            @include media-breakpoint-only(xs){
+                background-color: $gray-300;
+            }   
+
+        }
+    // end Ativador Menu Sticky
+    
+    .navbar {
+        padding: map-get($spacers, 4) 0;
+
+        @include media-breakpoint-only(xs){
+            padding-top: map-get($spacers, 0);
+        }
+
+        // Logo
+        .custom-logo-link {
+
+            @include media-breakpoint-only(xs){
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-bottom: map-get($spacers, 2);
+            }
+
+        }
+
+        // Button Menu
+        .navbar-toggler {
+            background-color: $white;
+            border-color: transparent;
+        }
+
+        // Lista Menu
+        #navbarSupportedContent {
+
+
+            .navbar-nav {
+                @include media-breakpoint-only(xs){
+                    // background-color: $gray-600;
+                }
+
+                .menu-item {
+                    margin: 0 map-get($spacers, 3 );
+                    
+                    a {
+                        font-weight: $font-weight-normal;
+                        text-transform: capitalize;
+                        color: $black;
+                        text-decoration: none;
+                        // letter-spacing: 0.8px;
+                        font-family: "Poppins", sans-serif;
+                        transition: all 0.6s;
+                        @include responsive-font-size(16px);
+
+                        &:hover {
+                            transition: all 0.7s;
+                            color: $red;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // Button Sale - Get Coaching
+        .btn-sale {
+            text-decoration: none;
+            display: inline-block;
+            background-color: $red;
+            color: $white;
+            border-radius: 2px;
+            font-weight: $font-weight-bold;
+            border: solid 1px transparent;
+            padding: map-get($spacers , 2) map-get($spacers , 3);
+            transition: all 0.7s;
+            font-family: 'Poppins', sans-serif;
+            @include responsive-font-size(15px);
+
+            &:hover{
+                transition: all 0.7s;
+                background-color: transparent;
+                border: solid 1px $red;
+                color: $red;
+            }
+
+            @include media-breakpoint-only(xs){
+                padding: map-get($spacers, 1) map-get($spacers, 2);
+                border-radius: map-get($spacers, 1);
+            }
+        }
+
+        // Button Search
+        .btn-search {
+            
+            i {
+                transition: all 0.6s;
+                cursor: pointer;
+
+                &:hover {
+                    transition: all 0.6s;
+                    color: $red;
+                }
+
+            }
+        }
+
+        // Button Login
+        .btn-login {
+            a {
+                text-decoration: none;
+                transition: all 0.6s;
+                font-weight: $font-weight-normal;
+                font-family: 'Poppins', sans-serif;
+                @include responsive-font-size(16px);
+
+                &:hover {
+                    transition: all 0.6s;
+                    color: $red;
+                }
+            }
+        }
+
+        .group-icons {
+            li {
+                i {
+                    color: $dark;
+                }
+            }
+        }
+
+    }
+
+
+}
