@@ -28,6 +28,15 @@ function up_after_setup(){
         
     ]);
 
+    add_theme_support('custom-header', [
+        'default-image'      => get_template_directory_uri() . './src/images/logo.png',
+        'default-text-color' => '000',
+        'width'              => 1000,
+        'height'             => 250,
+        'flex-width'         => true,
+        'flex-height'        => true,
+    ]);
+
     register_nav_menu('main-menu', ('Menu Principal') );
     register_nav_menu('footer-menu', ('Footer Menu') );
 }

@@ -56,10 +56,11 @@
         // Lista Menu
         #navbarSupportedContent {
 
-
+            // Menu Items
             .navbar-nav {
                 @include media-breakpoint-only(xs){
                     // background-color: $gray-600;
+                    padding: map-get($spacers, 3) 0 map-get($spacers, 1);
                 }
 
                 .menu-item {

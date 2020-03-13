@@ -272,7 +272,7 @@
 <!-- end Footer -->
 
 <!-- Scripts -->
-    <!-- <script src="./theme.min.js"></script> -->
+    <script src=" <?php echo get_template_directory_uri() ?>'/node_modules/bootstrap/dist/js/bootstrap.min.js' "></script>
 <!-- end Scripts -->
 <script>
 let menu = document.querySelector('.header');

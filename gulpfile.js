@@ -48,7 +48,7 @@ function html_minifier() {
 
 // Styles
 function styles() {
-    return gulp.src(['src/scss/theme.scss'])
+    return gulp.src(['src/scss/theme.scss', 'src/fonts/*.css'])
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(sass({
             includePaths: [
@@ -83,13 +83,10 @@ function styles_login() {
 // Scripts
 function scripts() {
     return gulp.src(['src/js/**/*.js'])
-        .pipe(sourcemaps.init())
-        .pipe(rollup({ plugins: [resolve(), commonjs()] }, 'umd'))
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(concat('theme.js'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
-        .pipe(sourcemaps.write('./'))
         .pipe(browserSync.stream({ match: 'src/js/**/*.js' }))
         .pipe(gulp.dest('./public'));
 }
@@ -112,7 +109,7 @@ function fonts() {
 }
 
 // Default task
-gulp.task('default', gulp.series(html_minifier, styles, scripts, images, fonts));
+gulp.task('default', gulp.series(html_minifier, styles, images, fonts, scripts));
 
 // Watch task
 gulp.task('watch', function() {
