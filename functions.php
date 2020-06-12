@@ -1,8 +1,8 @@
 <?php 
 
 // INCLUDE
-    require get_template_directory().'./include/setup.php';
-    require get_template_directory().'./include/customizer/theme-customizer.php';
+    require get_template_directory().'/include/setup.php';
+    require get_template_directory().'/include/customizer/theme-customizer.php';
 
 
 // HOOKS
